@@ -18,6 +18,17 @@ class Auth extends CI_Controller
   {
     $data = array();
     if ($this->input->post()) {
+      $user = register_form();
+      $this->auth_model->save($user);
+      redirect('auth/login');
+    }
+    $this->load->view('auth/register', $data);
+  }
+
+  function login()
+  {
+    $data = array();
+    if ($this->input->post()) {
       list($username, $password) = login_form();
       $user = $this->auth_model->read_by_username_and_password($username, $password);
       if ($user) {
@@ -25,8 +36,16 @@ class Auth extends CI_Controller
         redirect('dashboard');
       }
     }
-    $this->load->view('auth/register', $data);
+    $this->load->view('auth/login', $data);
   }
 
-  function login() {}
+  function forgot()
+  {
+    $data = array();
+    if ($this->input->post()) {
+      $email = $this->input->post('email');
+      $data['info'] = '';
+    }
+    $this->load->view('auth/forgot', $data);
+  }
 }

@@ -1,17 +1,13 @@
-<h2>Login</h2>
-<?php echo form_open('auth/login'); ?>
+<h2>Forgot password?</h2>
+<?php echo form_open('auth/forgot'); ?>
 <p>
-  Username<br>
-  <?php echo form_input('username', $this->input->post('username'), ''); ?>
+  Email address<br>
+  <?php echo form_input('email', $this->input->post('email'), ''); ?>
 </p>
 <p>
-  Password<br>
-  <?php echo form_password('password', '', ''); ?>
+  <?php echo form_submit('submit', 'Send password reset link'); ?>
 </p>
 <p>
-  <?php echo form_submit('submit', 'Login'); ?>
-</p>
-<p>
-  No account yet? <?php echo anchor('register', 'Register'); ?>
+  Nevermind, I remember my account. <?php echo anchor('login', 'Login'); ?>
 </p>
 <?php echo form_close(); ?>
