@@ -2,7 +2,8 @@
     "name": "iescarro/codeigniter3-auth",
     "autoload": {
         "psr-4": {
-            "Codeigniter3\\": "src/"
+            "Codeigniter3\\Auth\\": "src",
+            "Codeigniter3\\Auth\\Commands\\": "src/commands"
         }
     },
     "authors": [
