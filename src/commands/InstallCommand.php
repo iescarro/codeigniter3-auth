@@ -25,8 +25,8 @@ class InstallCommand extends Command
     $io = new SymfonyStyle($input, $output);
 
     // Define the source and target directories
-    $sourceDir = __DIR__ . '/../../controllers'; // Adjust this if the path is different
-    $targetDir = __DIR__ . '/../../../../application/controllers';
+    $sourceDir = __DIR__ . '/../controllers'; // Adjust this if the path is different
+    $targetDir = __DIR__ . '/../../../../../../application/controllers';
 
     // Create a Filesystem instance for file operations
     $filesystem = new Filesystem();
