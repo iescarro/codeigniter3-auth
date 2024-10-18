@@ -12,5 +12,7 @@
             "email": "ian.escarro@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "symfony/filesystem": "^7.1"
+    }
 }
