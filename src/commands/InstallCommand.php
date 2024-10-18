@@ -26,7 +26,7 @@ class InstallCommand extends Command
 
     // Define the source and target directories
     $sourceDir = __DIR__ . '/../controllers'; // Adjust this if the path is different
-    $targetDir = __DIR__ . '/../../../../application/controllers';
+    $targetDir = __DIR__ . '/../../../../../application/controllers';
 
     // Create a Filesystem instance for file operations
     $filesystem = new Filesystem();
