@@ -12,7 +12,7 @@ CodeIgniter3-Auth is a minimal and simple authentication library for CodeIgniter
 
 ## Official Documentation
 
-TBD
+[Wiki](https://github.com/iescarro/codeigniter3-auth/wiki) for now, will improve later.
 
 ## Contributing
 
