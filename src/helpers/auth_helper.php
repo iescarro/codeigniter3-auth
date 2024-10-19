@@ -12,9 +12,10 @@ function login_form()
 function register_form()
 {
   $obj = &get_instance();
+  $encrypted_password = password_hash($obj->input->post('password'), PASSWORD_BCRYPT);
   return array(
     'name' => $obj->input->post('name'),
     'email' => $obj->input->post('email'),
-    'password' => $obj->input->post('password'),
+    'password' => $encrypted_password,
   );
 }

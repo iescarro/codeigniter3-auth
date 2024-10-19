@@ -1,4 +1,9 @@
 <h2>Login</h2>
+<?php if (isset($info)): ?>
+  <p>
+    <?php echo $info; ?>
+  </p>
+<?php endif; ?>
 <?php echo form_open('auth/login'); ?>
 <p>
   Username<br>
@@ -12,6 +17,6 @@
   <?php echo form_submit('submit', 'Login'); ?>
 </p>
 <p>
-  No account yet? <?php echo anchor('register', 'Register'); ?>
+  No account yet? <?php echo anchor('auth/register', 'Register'); ?>
 </p>
 <?php echo form_close(); ?>
