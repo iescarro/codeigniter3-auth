@@ -30,12 +30,14 @@ $sourceDirs = [
   __DIR__ . '/src/helpers',
   __DIR__ . '/src/models',
   __DIR__ . '/src/views/auth',
+  __DIR__ . '/src/views/dashboard',
 ];
 $targetDirs = [
-  __DIR__ . '/../../application/controllers',
-  __DIR__ . '/../../application/helpers',
-  __DIR__ . '/../../application/models',
-  __DIR__ . '/../../application/views/auth',
+  __DIR__ . '/../../../application/controllers',
+  __DIR__ . '/../../../application/helpers',
+  __DIR__ . '/../../../application/models',
+  __DIR__ . '/../../../application/views/auth',
+  __DIR__ . '/../../../application/views/dashboard',
 ];
 
 
