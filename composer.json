@@ -1,5 +1,6 @@
 {
     "name": "iescarro/codeigniter3-auth",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "CodeIgniter3\\Auth\\": "src",
