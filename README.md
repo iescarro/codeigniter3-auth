@@ -1,4 +1,4 @@
-<p align="center"><img src="/art/logo.svg" alt="Logo CodeIgniter3 Auth"></p>
+<p align="center"><img src="/art/logo.png" alt="Logo CodeIgniter3 Auth"></p>
 
 <p align="center">
     <a href="https://packagist.org/packages/iescarro/codeigniter3-auth"><img src="https://img.shields.io/packagist/dt/iescarro/codeigniter3-auth" alt="Total Downloads"></a>
