@@ -1,8 +1,6 @@
 <?php
 class Auth_model extends CI_Model
 {
-  var $db;
-
   function __construct()
   {
     $this->load->database();
