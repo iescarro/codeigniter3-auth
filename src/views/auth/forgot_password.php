@@ -10,12 +10,12 @@
   <title></title>
 
   <style>
-    .login {
+    .forgot-password {
       width: 350px;
       margin: auto;
     }
 
-    .login label {
+    .forgot-password label {
       font-size: .8em;
       text-transform: uppercase;
     }
@@ -24,7 +24,7 @@
 
 <body>
 
-  <div class="login  mt-5">
+  <div class="forgot-password  mt-5">
     <div class="card shadow-sm p-2">
       <div class="card-body">
         <center>
@@ -35,26 +35,17 @@
             <?= $info; ?>
           </small>
         <?php endif; ?>
-        <?= form_open('auth/login'); ?>
+        <?= form_open('auth/forgot_password'); ?>
         <p>
-          <label for="email">Email</label>
-          <input type="email" name="username" value="<?= set_value('username'); ?>" class="form-control">
-          <?php if (isset($warning)): ?>
-            <small class="text-danger">
-              <?= $warning; ?>
-            </small>
-          <?php endif; ?>
+          <label for="email">Email address</label>
+          <input type="email" name="email" value="<?= set_value('email'); ?>" class="form-control">
+          <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
         </p>
         <p>
-          <label for="password">Password</label>
-          <input type="password" name="password" class="form-control">
+          <button type="submit" class="btn btn-outline-secondary ">Send password reset link</button>
         </p>
         <p>
-          <button type="submit" class="btn btn-outline-secondary">Login</button>
-          <?= anchor('auth/forgot_password', 'Forgot password'); ?>
-        </p>
-        <p>
-          No account yet? <?= anchor('auth/register', 'Register'); ?>
+          Already have an account. <?= anchor('auth/login', 'Login'); ?>
         </p>
         <?= form_close(); ?>
       </div>

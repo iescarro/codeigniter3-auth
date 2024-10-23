@@ -10,12 +10,12 @@
   <title></title>
 
   <style>
-    .login {
+    .reset-password {
       width: 350px;
       margin: auto;
     }
 
-    .login label {
+    .reset-password label {
       font-size: .8em;
       text-transform: uppercase;
     }
@@ -24,7 +24,7 @@
 
 <body>
 
-  <div class="login  mt-5">
+  <div class="reset-password  mt-5">
     <div class="card shadow-sm p-2">
       <div class="card-body">
         <center>
@@ -32,31 +32,27 @@
         </center>
         <?php if (isset($info)): ?>
           <small class="text-success">
-            <?= $info; ?>
+            <?php echo $info; ?>
           </small>
         <?php endif; ?>
-        <?= form_open('auth/login'); ?>
+        <?php echo form_open('auth/reset_password/' . $token); ?>
         <p>
-          <label for="email">Email</label>
-          <input type="email" name="username" value="<?= set_value('username'); ?>" class="form-control">
-          <?php if (isset($warning)): ?>
-            <small class="text-danger">
-              <?= $warning; ?>
-            </small>
-          <?php endif; ?>
-        </p>
-        <p>
-          <label for="password">Password</label>
+          <label for="password">New password</label>
           <input type="password" name="password" class="form-control">
+          <?php echo form_error('password', '<small class="text-danger">', '</small>'); ?>
         </p>
         <p>
-          <button type="submit" class="btn btn-outline-secondary">Login</button>
-          <?= anchor('auth/forgot_password', 'Forgot password'); ?>
+          <label for="confirm_password">Confirm password</label>
+          <input type="password" name="confirm_password" class="form-control">
+          <?php echo form_error('confirm_password', '<small class="text-danger">', '</small>'); ?>
         </p>
         <p>
-          No account yet? <?= anchor('auth/register', 'Register'); ?>
+          <button type="submit" class="btn btn-outline-secondary">Update password</button>
         </p>
-        <?= form_close(); ?>
+        <p>
+          Already have an account. <?php echo anchor('auth/login', 'Login'); ?>
+        </p>
+        <?php echo form_close(); ?>
       </div>
     </div>
 
