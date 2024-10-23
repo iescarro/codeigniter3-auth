@@ -42,9 +42,9 @@ class Dashboard extends CI_Controller
   function __construct()
   {
     parent::__construct();
-    $this->load->library(array('session', 'layout'));
-    $this->redirect_if(!$this->session->userdata('user_id'), 'auth/login');
-    $this->load->helper(array('html', 'url', 'form'));
+    $this->load->helper(['html', 'url', 'form']);
+    $this->load->library(['session', 'layout']);
+    redirect_if(!$this->session->userdata('user_id'), 'auth/login');
     $this->layout->set('user');
   }
 
@@ -52,12 +52,5 @@ class Dashboard extends CI_Controller
   {
     $data = array();
     $this->layout->view('dashboard/index', $data);
-  }
-
-  private function redirect_if($condition, $url)
-  {
-    if ($condition) {
-      redirect($url);
-    }
   }
 }
