@@ -1,5 +1,6 @@
 {
     "name": "iescarro/codeigniter3-auth",
+    "description": "A very simple and minimal CodeIgniter3 authentication scaffolding.",
     "license": "MIT",
     "autoload": {
         "psr-4": {
