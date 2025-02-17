@@ -50,4 +50,4 @@ foreach ($sourceDirs as $sourceDir) {
   $i++;
 }
 
-echo "All files copied successfully!";
+echo "All files copied successfully!\n";
