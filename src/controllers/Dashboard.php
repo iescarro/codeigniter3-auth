@@ -39,13 +39,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller
 {
+  var $load;
+  var $layout;
+  var $session;
+
   function __construct()
   {
     parent::__construct();
     $this->load->helper(['html', 'url', 'form']);
     $this->load->library(['session', 'layout']);
     redirect_if(!$this->session->userdata('user_id'), 'auth/login');
-    $this->layout->set('user');
+    $this->layout->set('layouts/user');
   }
 
   function index()

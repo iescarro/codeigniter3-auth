@@ -44,6 +44,8 @@ class Auth extends CI_Controller
   var $load;
   var $input;
   var $session;
+  var $form_validation;
+  var $layout;
 
   function __construct()
   {
@@ -101,7 +103,7 @@ class Auth extends CI_Controller
     }
     $data['user'] = $user;
     $this->load->library('layout');
-    $this->layout->set('user');
+    $this->layout->set('layouts/user');
     $this->layout->view('auth/profile', $data);
   }
 
